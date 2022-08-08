@@ -16,22 +16,26 @@ body {
     display: flex;
     align-items: center;
     text-align: center;
+    margin: 10px 10px 10px 10px;
     height: 100%;
-    margin: 0px 5px;
-    padding: 5px, 0px, 5px, 0px;
+    padding: 5px 0px 5px 0px;
+    font-size: 70%;
 }
 
 .nav-menu {
     display: none;
-    padding: inherit;
 }
+
+.hidden {
+    display: none;
+}
+
 .nav-menu-img {
     height: 100%;
 }
 
 .nav-logo-img {
     height: 100%;
-    padding: inherit;
 }
 
 .nav-links:hover {
@@ -114,4 +118,106 @@ body {
 .section01-2 {
     width: 50%;
     margin: 0rem;
+}
+
+.python-courses {
+    border: 0.5px solid grey;
+}
+
+.section-description {
+    margin: 10px 10px 10px 10px;
+}
+
+.explore {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 15px 32px;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.courses-preview {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+}
+
+.course-preview {
+    margin: 0px 0.9rem;
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+}
+
+.course-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.course-title {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;    
+}
+
+.course-author {
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    padding: 0;
+    margin: 0;
+}
+
+.grey {
+    color: grey;
+}
+
+.checked {
+    color: orange;
+}
+
+@media screen and (max-width: 800px) {
+    .nav-item {
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        display: block;
+    }
+
+    .nav-search {
+        display: none;
+    }
+
+    .nav-logo {
+        flex-grow: 1;
+        align-self: center;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-log-in {
+        display: none;
+    }
+
+    .nav-sign-up {
+        display: none;
+    }
+    
+    .hidden {
+        display: block;
+    }
+
+    .section01 {
+        flex-direction: column-reverse;
+    }
+
+
 }
