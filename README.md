@@ -1,2 +1,4 @@
-# udemy_static_homepage
-bld.ai internship Frontend Project#1 Phase#1
+### Udemy Static Homepage
+---
+A static website for [udemy](https://www.udemy.com/) homepage using `html` and `css`
+
