@@ -1,0 +1,362 @@
+body {
+    all: revert;
+    margin: 0px;
+    background-color: white;
+    font-family: sans-serif;
+}
+
+/* NAVIGATION BAR */
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid turquoise;
+}
+
+.nav-menu {
+    height: 15px;
+    width: 20px;
+}
+
+.nav-logo {
+    height: 60px;
+    width: 120px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.nav-search {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-start;
+    align-items: center;
+    height: 40px;
+    max-width: 30%;
+    margin: 2px;
+    border: 1px solid black;   
+    border-radius: 20px;
+}
+
+.search-button {
+    height: 40px;
+    width: 30px;
+    border: none;
+    background: none;
+    background-color: none;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {display: none; width : 0; height: 0;}
+input[type=search]::-ms-reveal {display: none; width : 0; height: 0;}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {display: none;}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    margin: 10px;
+}
+
+.nav-cart {
+    height: 30px;
+    width: 40px;
+}
+
+.nav-log {
+    border: 1px solid black;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.nav-log:hover {
+    text-decoration: none;
+    color: black;
+    background-color: rgb(235, 229, 229);
+}
+
+.nav-sign {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.nav-sign:hover {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(57, 57, 57);
+}
+
+.nav-language {
+    all: revert;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.small-text {
+    font-size: small;
+}
+
+.hidden-desktop {
+    display: none;
+}
+
+/*OFFERS SECTION*/
+
+.offers {
+    all: revert;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f9fb;
+    font-size: 12px;
+    font-family:'Courier New', Courier, monospace;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.offer-text {
+    all: revert;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    margin: 10px;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 3%;
+}
+
+.offer-text h1 {
+    font-weight: bold;
+}
+
+.offer-img {
+    all: revert;
+    width: 50%;
+}
+
+/*COURSES SECTION*/
+
+.courses-preview {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.courses-preview-header {
+    margin-left: 10px;
+}
+
+.courses-preview-header h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.courses-preview-header h3 {
+    all: revert;
+    margin-top: -5px;
+    font-weight: lighter;
+}
+
+.courses-list {
+    display: block;
+    border: 1px solid grey;
+    padding: 30px;
+}
+
+.courses-description h4 {
+    font-weight: bold;
+}
+
+.courses-description p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: medium;
+    font-weight: lighter;
+    max-width: 70%;
+}
+
+.explore-btn {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.courses-carousel {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.course-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+.course-img {
+    max-width: 250px;
+}
+
+.course-title {
+    margin: 5px;
+    font-weight: bold;
+    max-width: 250px;
+}
+
+.course-author {
+    margin: 0px;
+    color: gray;
+    font-size: smaller;
+}
+
+.course-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.course-rate {
+    font-weight: bold;
+    color: rgb(132, 95, 2);
+}
+
+.checked {
+    color: goldenrod;
+}
+
+.course-audience {
+    color: grey;
+    font-size: small;
+}
+
+.course-price {
+    font-size: medium;
+    font-weight: bold;
+}
+
+/*FOOTER*/
+
+footer {
+    display: block;
+    background-color: #1c1d1f;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    flex-grow: 1;
+    max-width: 250px;
+}
+
+.col a {
+    color:  white;
+    margin: 5px;
+    font-size: small;
+}
+
+.col a:hover {
+    text-decoration: underline;
+}
+
+.footer-cr {
+    display: flex;
+}
+
+.footer-cr p {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: flex-end;
+    margin-right: 30px;
+    color: white;
+    flex-grow: 1;
+}
+
+.footer-logo {
+    height: 50px;
+    width: 100px;
+    margin-left: 40px;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (max-width: 1000px) {
+    .hidden-desktop {
+        display: flex;
+    }
+    .hidden-small {
+        display: none;
+    }
+    
+    /* NAVIGATION BAR */
+
+    .nav-logo {
+        height: 40px;
+        width: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-search {
+        border: none;
+        max-width: 50px;
+    }
+    .nav-search:hover {
+        max-width: 300px;
+    }
+    .nav-search:hover > .search-bar {
+        display: flex;
+    }
+
+    /*OFFERS SECTION*/
+
+    .offers {
+        flex-direction: column-reverse;
+    }
+}
