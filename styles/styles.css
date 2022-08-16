@@ -174,7 +174,7 @@ input[type="search"]::-webkit-search-results-decoration {display: none;}
 }
 
 .courses-preview-header {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .courses-preview-header h1 {
@@ -188,9 +188,13 @@ input[type="search"]::-webkit-search-results-decoration {display: none;}
 }
 
 .courses-list {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     border: 1px solid grey;
     padding: 30px;
+    margin: 20px;
 }
 
 .courses-description h4 {
