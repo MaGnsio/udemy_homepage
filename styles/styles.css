@@ -197,15 +197,21 @@ input[type="search"]::-webkit-search-results-decoration {display: none;}
     margin: 20px;
 }
 
-.courses-description h4 {
+.courses-info h4 {
     font-weight: bold;
 }
 
-.courses-description p {
+.courses-info p {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: medium;
     font-weight: lighter;
-    max-width: 70%;
+    max-width: 800px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: normal;
 }
 
 .explore-btn {
@@ -251,6 +257,10 @@ input[type="search"]::-webkit-search-results-decoration {display: none;}
     margin: 0px;
     color: gray;
     font-size: smaller;
+    max-width: 250px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .course-rating {
@@ -262,16 +272,12 @@ input[type="search"]::-webkit-search-results-decoration {display: none;}
 
 .course-rate {
     font-weight: bold;
+    padding-right: 5px;
     color: rgb(132, 95, 2);
 }
 
 .checked {
     color: goldenrod;
-}
-
-.course-audience {
-    color: grey;
-    font-size: small;
 }
 
 .course-price {
