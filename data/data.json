@@ -1,5 +1,5 @@
 {
-    "courses1": [
+    "python": [
         {
             "title": "Top courses in Python",
             "name": "Python",
@@ -207,7 +207,7 @@
             "price": 15.99
         }
     ],
-    "courses2": [
+    "excel": [
         {
             "title": "Top courses in Excel",
             "name": "Excel",
@@ -405,7 +405,7 @@
             "price": 19.99
         }
     ],
-    "courses3": [
+    "web": [
         {
             "title": "Top courses in Web Development",
             "nam": "Web Development",
@@ -613,7 +613,7 @@
             "price": 17.99
         }
     ],
-    "courses4": [
+    "java_script": [
         {
             "title": "Top courses in JavaScript",
             "name": "JavaScript",
@@ -816,7 +816,7 @@
             "price": 14.99
         }
     ],
-    "courses5": [
+    "data_science": [
         {
             "title": "Top courses in Data Science",
             "name": "Data Science",
