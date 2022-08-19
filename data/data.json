@@ -613,7 +613,7 @@
             "price": 17.99
         }
     ],
-    "java_script": [
+    "js": [
         {
             "title": "Top courses in JavaScript",
             "name": "JavaScript",
@@ -816,7 +816,7 @@
             "price": 14.99
         }
     ],
-    "data_science": [
+    "datascience": [
         {
             "title": "Top courses in Data Science",
             "name": "Data Science",

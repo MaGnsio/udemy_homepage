@@ -187,6 +187,15 @@ input[type="search"]::-webkit-search-results-decoration {display: none;}
     font-weight: lighter;
 }
 
+.courses-preview a {
+    color: darkgrey;
+    font-weight: bolder;
+}
+
+.courses-preview a:active {
+    color: black;
+}
+
 .courses-list {
     display: flex;
     flex-direction: column;
