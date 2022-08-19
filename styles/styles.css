@@ -170,7 +170,7 @@ input[type="search"]::-webkit-search-results-decoration {display: none;}
 .courses-preview {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
 }
 
 .courses-preview-header {
@@ -292,6 +292,29 @@ input[type="search"]::-webkit-search-results-decoration {display: none;}
 .course-price {
     font-size: medium;
     font-weight: bold;
+}
+
+/*CATEGORIES*/
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.categories h4 {
+    margin-left: 20px;
+}
+
+.categories-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 5px;
+}
+
+.img-thumbnail {
+    border: none;
 }
 
 /*FOOTER*/
