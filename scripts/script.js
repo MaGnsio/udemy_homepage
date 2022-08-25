@@ -51,8 +51,9 @@ function getCourseAuthors(authors) {
         if (j) {
             authorsList += `, `;
         }
-        authorsList += authors[j];
+        authorsList += authors[j].name;
     }
+    console.log(authorsList);
     courseAuthors.textContent = authorsList;
     return courseAuthors;
 }
