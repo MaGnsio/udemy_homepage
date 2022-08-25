@@ -1,3 +1,5 @@
+const coursesCategory = [`python`, `excel`, `web`, `js`, `datascience`];
+
 function getCoursesHeader(header) {
     const coursesHeader = document.createElement(`h4`);
     coursesHeader.textContent = header;
@@ -10,16 +12,21 @@ function getCoursesDescription(description) {
     return coursesDescription;
 }
 
-function loadCoursesInfo(header, description) {
-    const coursesInfo = document.querySelector(`.courses-info`);
+function getCoursesInfo(header, description) {
+    const coursesInfo = document.createElement(`div`);
+    coursesInfo.setAttribute(`class`, `courses-info hidden-small`);
     coursesInfo.innerHTML = ``;
     coursesInfo.appendChild(getCoursesHeader(header));
     coursesInfo.appendChild(getCoursesDescription(description));
+    return coursesInfo;
 }
 
-function loadCoursesExploreButton(name) {
-    coursesExploreButton = document.querySelector(`.explore-btn`);
-    coursesExploreButton.textContent = `Explore ${name}`;    
+function getCoursesExploreButton(name) {
+    const coursesExploreButton = document.createElement(`button`);
+    coursesExploreButton.setAttribute(`class`, `explore-btn hidden-small`);
+    coursesExploreButton.setAttribute(`tybe`, `button`);
+    coursesExploreButton.textContent = `Explore ${name}`;
+    return coursesExploreButton;
 }
 
 function getCourseImage(image, title) {
@@ -44,8 +51,9 @@ function getCourseAuthors(authors) {
         if (j) {
             authorsList += `, `;
         }
-        authorsList += authors[j];
+        authorsList += authors[j].name;
     }
+    console.log(authorsList);
     courseAuthors.textContent = authorsList;
     return courseAuthors;
 }
@@ -86,14 +94,26 @@ function getCourse(courseData) {
     return courseContent;
 }
 
-function loadCourses(listName, key="") {
-    fetch(`http://localhost:3000/${listName}`)
+function loadCourses(listIndex, key = ``) {
+    fetch(`http://localhost:3000/${coursesCategory[listIndex]}`)
     .then(data => data.json())
     .then(data => {
-        loadCoursesInfo(data[0].header, data[0].description);
-        loadCoursesExploreButton(data[0].name);
-        coursesContainer = document.querySelector('.courses-carousel');
-        coursesContainer.innerHTML = ``;
+        const tab = document.createElement(`div`);
+        document.querySelector(`.tab-content`).appendChild(tab);
+        if (listIndex === 0) {
+            tab.setAttribute(`class`, `tab-pane fade active show courses-list`);
+        } else {
+            tab.setAttribute(`class`, `tab-pane fade courses-list`);
+        }
+        tab.setAttribute(`id`, `${coursesCategory[listIndex]}`);
+        tab.setAttribute(`role`, `tabpanel`);
+        const ariaLabelledby = `${coursesCategory[listIndex]}` + `-tab`;
+        tab.setAttribute(`aria-labelledby`, ariaLabelledby);
+        tab.appendChild(getCoursesInfo(data[0].header, data[0].description));
+        tab.appendChild(getCoursesExploreButton(data[0].name));
+        const coursesContainer = document.createElement(`div`);
+        coursesContainer.classList.add(`courses-carousel`);
+        tab.appendChild(coursesContainer);
         for(let i = 1; i < data.length; ++i) { 
             if (key !== "" && data[i].title.toLowerCase().indexOf(key.toLowerCase()) == -1) {
                 continue;
@@ -103,12 +123,19 @@ function loadCourses(listName, key="") {
     });
 }
 
-loadCourses("data_science");
+function loadCoursesSection(key = ``) {
+    document.querySelector(`.tab-content`).innerHTML = ``;
+    for (let i = 0; i < coursesCategory.length; ++i) {    
+        loadCourses(i, key);
+    }
+}
+
+loadCoursesSection();
 
 const searchButton = document.querySelector(`.search-button`);
 
 searchButton.addEventListener(`click`, (event) => {
     event.preventDefault();
     const key = document.querySelector(`.search-bar`).value;
-    loadCourses("data_science", key);
+    loadCoursesSection(key);
 });
